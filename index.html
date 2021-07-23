@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Spaced</title>
+	<style>
+		body{
+			margin: 0px;
+			font-family: sans-serif;
+		}
+		
+		#contenido{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-image: url(./Imagenes/background.png);
+			background-position: center;
+			background-size: cover;
+		}
+		#header{
+			
+			width: 100%;
+			height: 80px;
+			display: flex;
+			flex-direction: row;
+		}
+		#LogoName{
+			min-width: 200px;
+			height: 100%;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 30px;
+			opacity: 0;
+			animation: fadeIn 2s ease forwards;
+		}
+		#Menu{
+			flex: 1;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+			padding-right:30px;
+		}
+		.itemMenu{
+			color: white;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			margin-left: 20px;
+			border-radius: 20px;
+			-webkit-transition:all .5s ease;
+			cursor: default;
+			-webkit-user-select:none;
+			transform: translateY(-200%);
+			animation: topIn .5s linear forwards;
+			animation-delay: calc(0.05s * var(--i));
+		
+		}
+		.itemMenu:hover{
+			background: rgba(255, 255, 255, 0.1);
+			-webkit-transition:all .5s ease;
+		}
+		#precentContent{
+			width:100%;
+			height: 500px;
+			margin-top: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+		#prencentacion{
+			width: 340px;
+			height: 300px;
+			padding-right: 200px;
+		}
+		#slogan{
+			color: white;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 15px;
+			cursor: default;
+			-webkit-user-select:none;
+			transform: translatex(-200%);
+			opacity: 0;
+			animation:  leftIn 1s linear forwards;
+		}
+		#nameBs{
+			color: white;
+			font-size: 40px;
+			margin-bottom: 30px;
+			text-shadow: 0px 0px 10px rgb(0, 0, 0);
+			-webkit-user-select:none;
+			transform: translatex(-200%);
+			opacity: 0;
+			animation:  leftIn 1.1s linear forwards;
+		}
+		.boton{
+			width: 100px;
+			height: 35px;
+			border-radius: 15px;
+			border:1px solid rgba(247, 247, 247, 0.26);
+			background: transparent;
+			color: white;
+			margin-right: 10px;
+			opacity: 0;
+			transform: translate(200%);
+			
+			animation: bottomIn .5s linear forwards;
+		}
+		.boton:hover{
+			background: rgba(255, 255, 255, 0.28);
+			-webkit-transition:all .5s ease;
+			
+		}
+		
+		
+		/*KeyFrames Animaciones*/
+		@keyframes fadeIn{
+			from{
+				opacity: 0;
+				
+			}
+			to{
+				opacity: 1;
+			}
+		}
+		
+		@keyframes  topIn{
+			from{
+				opacity: 0;
+				transform: translateY(-200%);
+			}
+			to{
+				opacity: 1;
+				transform: translateY(0%);
+				
+			}
+			
+		}
+		
+		@keyframes leftIn{
+			from{
+				opacity: 0;
+				transform: translatex(-200%);
+				
+			}
+			to{
+				opacity: 1;
+				transform: translatex(0%);
+				
+			}
+		}
+		
+		@keyframes bottomIn{
+			from{
+				
+				opacity: 0;
+				transform: translateY(200%);
+				
+			}to{
+				
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="contenido">
+		
+		<div id="header">
+			
+			<div id="LogoName">
+				
+				Spaced
+				
+			</div>
+			
+			<div id="Menu">
+				
+				<div class="itemMenu" style="--i:0">Home</div>
+				<div class="itemMenu" style="--i:1">Services</div>
+				<div class="itemMenu" style="--i:2">Blog</div>
+				<div class="itemMenu" style="--i:3">About</div>
+				
+			</div>
+			
+		</div>
+		
+		<div id="precentContent">
+		
+			<div id="prencentacion">
+				
+					<div id="slogan">The Night Sky</div>
+						
+					<div id="nameBs">MAKETAS Y SOLUCIONES CSS</div>
+						
+					<div id="router">
+						
+						<input class="boton" type="submit" value="Services">
+						
+						<input class="boton" type="submit" value="About">
+						
+					</div>
+							
+					
+			</div>
+			
+		</div>
+		
+		
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
